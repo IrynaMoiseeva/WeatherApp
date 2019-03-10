@@ -61,7 +61,7 @@
         </StackLayout>
      <StackLayout Orientation="Horizontal">       
                 <Label FontSize="17"
-                    Text="{Binding Messege}"
+                    Text="{Binding Message}"
                     TextColor="Blue"
                     Margin="30" />
         </StackLayout>
