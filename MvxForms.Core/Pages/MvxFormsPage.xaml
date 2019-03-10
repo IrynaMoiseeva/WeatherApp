@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d:MvxContentPage
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+    x:TypeArguments="viewModels:MvxFormsViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MvxForms.Core.Pages"
+    xmlns:viewModels="clr-namespace:MvxForms.Core.ViewModels"
+    x:Class="MvxForms.Core.Pages.MvxFormsPage">
+     <StackLayout Orientation="Vertical"
+                Margin="30"
+                Padding="0"
+                Spacing="10">
+        
+        
+        <StackLayout Orientation="Horizontal">
+             
+            <Entry Placeholder="Enter city"
+                    HeightRequest="30"
+                    WidthRequest="200"  
+                    Text="{Binding City, Mode=TwoWay}"
+                    TextColor="Black"
+                    FontSize="16"
+                    PlaceholderColor="Gray"
+                    BackgroundColor="LightGray"
+                    Margin="0" />  
+            <Button Text="Search" x:Name="btnGetWeather" Command="{Binding GetWeatherCommand}" /> 
+        </StackLayout>  
+        
+        <StackLayout Orientation="Horizontal">       
+                <Label FontSize="17"
+                    Text="Description:"
+                    TextColor="Gray"
+                    Margin="10" /> 
+                <Label FontSize="17"
+                    Text="{Binding Description}"
+                    TextColor="Black"
+                    Margin="10" />
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">       
+                <Label FontSize="17"
+                    Text="Temperature (max):"
+                    TextColor="Gray"
+                    Margin="10" /> 
+                <Label FontSize="17"
+                    Text="{Binding HighTemp}"
+                    TextColor="Black"
+                    Margin="10" />
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">       
+                <Label FontSize="17"
+                    Text="Temperature (min):"
+                    TextColor="Gray"
+                    Margin="10" /> 
+                <Label FontSize="17"
+                    Text="{Binding LowTemp}"
+                    TextColor="Black"
+                    Margin="10" />
+        </StackLayout>
+     <StackLayout Orientation="Horizontal">       
+                <Label FontSize="17"
+                    Text="{Binding Messege}"
+                    TextColor="Blue"
+                    Margin="30" />
+        </StackLayout>
+         </StackLayout>
+</d:MvxContentPage>
+
